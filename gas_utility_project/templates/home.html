@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Gas Utility Services{% endblock %}
+
+{% block content %}
+<h1>Welcome to Gas Utility Services</h1>
+<p>Here you can submit and track your service requests, and view your account information.</p>
+{% if user.is_authenticated %}
+    <p>Hello, {{ user.username }}! What would you like to do today?</p>
+    <ul>
+        <li><a href="{% url 'submit_request' %}">Submit a new service request</a></li>
+        <li><a href="{% url 'track_request' %}">Track your existing requests</a></li>
+        <li><a href="{% url 'account_info' %}">View your account information</a></li>
+    </ul>
+{% else %}
+    <p>Please <a href="{% url 'login' %}">login</a> or <a href="{% url 'register' %}">register</a> to access our services.</p>
+{% endif %}
+{% endblock %}

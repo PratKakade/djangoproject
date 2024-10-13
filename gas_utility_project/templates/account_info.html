@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Account Info - Gas Utility Services{% endblock %}
+
+{% block content %}
+<h2>Your Account Information</h2>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{ user.username }}</h5>
+        <p class="card-text"><strong>Email:</strong> {{ user.email }}</p>
+        <p class="card-text"><strong>Name:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+        <p class="card-text"><strong>Date Joined:</strong> {{ user.date_joined }}</p>
+    </div>
+</div>
+{% endblock %} 

@@ -1,0 +1,99 @@
+/* Base styles */
+
+body {
+    font-family: Arial, sans-serif; /* Modern, clean font */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Dark readable text */
+  }
+  
+  .container {
+    max-width: 1024px; /* Reasonable max-width for content */
+    margin: 0 auto; /* Center content horizontally */
+    padding: 0 15px; /* Add some breathing room */
+  }
+  
+  /* Navigation bar */
+  
+  .navbar {
+    background-color: #f8f9fa; /* Light, neutral background */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle border-bottom */
+  }
+  
+  .navbar-brand {
+    color: #007bff; /* Brand color (blue) */
+    font-weight: bold; /* Emphasize brand name */
+  }
+  
+  .nav-link {
+    color: #333; /* Dark readable link color */
+    padding: 0.5rem 1rem; /* Adjust padding for comfort */
+  }
+  
+  .nav-link:hover {
+    color: #007bff; /* Blue hover color for links */
+  }
+  
+  .btn-link {
+    padding: 0.5rem 0; /* Adjust padding for logout button */
+    color: #333; /* Dark logout button color */
+  }
+  
+  .btn-link:hover {
+    color: #007bff; /* Blue hover color for logout button */
+    text-decoration: none; /* Remove underline on hover */
+  }
+  
+  /* Content area */
+  
+  .mt-4 {
+    margin-top: 1rem; /* Consistent margin for content sections */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #333; /* Dark headings */
+  }
+  
+  .card {
+    background-color: #fff; /* White card background */
+    border: 1px solid rgba(0, 0, 0, 0.125); /* Light border */
+    border-radius: 0.25rem; /* Rounded corners */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    transition: all 0.2s ease-in-out; /* Smooth transitions */
+  }
+  
+  .card:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Slightly stronger hover shadow */
+  }
+  
+  .card-body {
+    padding: 1.5rem; /* Consistent padding for card content */
+  }
+  
+  /* Forms */
+  
+  form {
+    display: flex; /* Align form elements horizontally */
+    flex-direction: column; /* Stack elements vertically */
+  }
+  
+  .form-group {
+    margin-bottom: 1rem; /* Space between form groups */
+  }
+  
+  label {
+    font-weight: normal; /* Natural label weight */
+    margin-bottom: 0.5rem; /* Space between label and input */
+    display: block; /* Make labels behave like block elements */
+  }
+  
+  /* Responsiveness (optional) */
+  
+  @media (max-width: 768px) {
+    .navbar-nav {
+      display: flex; /* Stack navigation links vertically on small screens */
+      flex-direction: column; /* Align links vertically */
+      align-items: center; /* Center links horizontally */
+      margin-top: 1rem; /* Add some space after navbar on small screens */
+    }
+  }

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Track Requests - Gas Utility Services{% endblock %}
+
+{% block content %}
+<h2>Your Service Requests</h2>
+{% if requests %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Request Type</th>
+                <th>Status</th>
+                <th>Submitted</th>
+                <th>Last Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for request in requests %}
+            <tr>
+                <td>{{ request.get_request_type_display }}</td>
+                <td>{{ request.get_status_display }}</td>
+                <td>{{ request.created_at }}</td>
+                <td>{{ request.updated_at }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No service requests found.</p>
+{% endif %}
+{% endblock %}
